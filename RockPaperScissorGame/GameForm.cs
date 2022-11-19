@@ -1,5 +1,4 @@
 using MySqlConnector;
-using System.Data;
 
 namespace RockPaperScissorGame
 {
@@ -193,7 +192,8 @@ namespace RockPaperScissorGame
                     connection.Close();
 
                     Task.Delay(1500).Wait();
-                    EndPanel.BringToFront();
+                    EndPanel.Show();
+                    GamePanel.Hide();
                 }
             }
             else
@@ -206,7 +206,25 @@ namespace RockPaperScissorGame
 
         private void PlayAgainBtn_Click(object sender, EventArgs e)
         {
+            // Reseting the health label
+            playerHP = computerHP = 100;
+            PlayerHL.Text = ComputerHL.Text = "100 HP";
 
+            // Reseting the health bar of player and computer
+            PlayerH1.BackgroundImage = PlayerH2.BackgroundImage =
+            PlayerH3.BackgroundImage = PlayerH4.BackgroundImage =
+            PlayerH5.BackgroundImage = Resource.HeartBlack;
+
+            ComputerH1.BackgroundImage = ComputerH2.BackgroundImage =
+            ComputerH3.BackgroundImage = ComputerH4.BackgroundImage =
+            ComputerH5.BackgroundImage = Resource.HeartGreen;
+
+            // Removing the image in two picture box 
+            PlayerPicBox.Image = ComputerPicBox.Image = null;
+
+            // Redirect the user to the start panel
+            StartPanel.Show();
+            EndPanel.Hide();
         }
 
         private void GameForm_FormClosing(object sender, FormClosingEventArgs e)

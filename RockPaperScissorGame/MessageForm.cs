@@ -6,8 +6,9 @@
         {
             InitializeComponent();
 
-            Message.Text = message;
+            Message.Text = message; // Display message
 
+            // Set appearance base on the info
             if (info == "Name")
             {
                 MessagePic.Image = Resource.Warning;
@@ -41,6 +42,7 @@
             }
         }
 
+        // Button Functions
         private void MainBtn_Click(object sender, EventArgs e)
         {
             this.Close();
