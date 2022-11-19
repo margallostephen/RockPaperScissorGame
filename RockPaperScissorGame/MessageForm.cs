@@ -11,13 +11,13 @@
             if (info == "Name")
             {
                 MessagePic.Image = Resource.Warning;
-                MainBtn.BackColor = Color.Gold;
+                CloseBtn.BackColor = Color.Gold;
             }
             else if (info == "Sql")
             {
                 
                 MessagePic.Image = Resource.Error;
-                MainBtn.BackColor = Color.Crimson;  
+                CloseBtn.BackColor = Color.Red;  
 
             }
             else if (info == "Pick")
@@ -28,11 +28,11 @@
             else
             {
                 MessagePic.Image = Resource.Question;
-                MainBtn.Hide();
+                CloseBtn.Hide();
             }
 
             if (info == "Sql" || info == "Exit")
-                panel1.BackColor = panel2.BackColor = Color.Crimson;
+                panel1.BackColor = panel2.BackColor = Color.Red;
 
             if (info == "Name" || info == "Sql" || info == "Pick")
             {

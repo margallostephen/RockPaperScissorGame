@@ -32,7 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.MessagePic = new System.Windows.Forms.PictureBox();
             this.Message = new System.Windows.Forms.Label();
-            this.MainBtn = new System.Windows.Forms.Button();
+            this.CloseBtn = new System.Windows.Forms.Button();
             this.YesBtn = new System.Windows.Forms.Button();
             this.NoBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.MessagePic)).BeginInit();
@@ -74,24 +74,24 @@
             this.Message.TabIndex = 3;
             this.Message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // MainBtn
+            // CloseBtn
             // 
-            this.MainBtn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.MainBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MainBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.MainBtn.Location = new System.Drawing.Point(354, 218);
-            this.MainBtn.Name = "MainBtn";
-            this.MainBtn.Size = new System.Drawing.Size(160, 55);
-            this.MainBtn.TabIndex = 4;
-            this.MainBtn.Text = "Okay";
-            this.MainBtn.UseVisualStyleBackColor = false;
-            this.MainBtn.Click += new System.EventHandler(this.MainBtn_Click);
+            this.CloseBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.CloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CloseBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CloseBtn.Location = new System.Drawing.Point(354, 218);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(160, 55);
+            this.CloseBtn.TabIndex = 4;
+            this.CloseBtn.Text = "Close";
+            this.CloseBtn.UseVisualStyleBackColor = false;
+            this.CloseBtn.Click += new System.EventHandler(this.MainBtn_Click);
             // 
             // YesBtn
             // 
             this.YesBtn.BackColor = System.Drawing.Color.Gold;
             this.YesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.YesBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.YesBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.YesBtn.Location = new System.Drawing.Point(215, 218);
             this.YesBtn.Name = "YesBtn";
             this.YesBtn.Size = new System.Drawing.Size(160, 55);
@@ -102,9 +102,9 @@
             // 
             // NoBtn
             // 
-            this.NoBtn.BackColor = System.Drawing.Color.Crimson;
+            this.NoBtn.BackColor = System.Drawing.Color.Red;
             this.NoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NoBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NoBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NoBtn.Location = new System.Drawing.Point(487, 218);
             this.NoBtn.Name = "NoBtn";
             this.NoBtn.Size = new System.Drawing.Size(160, 55);
@@ -121,7 +121,7 @@
             this.ClientSize = new System.Drawing.Size(700, 350);
             this.Controls.Add(this.NoBtn);
             this.Controls.Add(this.YesBtn);
-            this.Controls.Add(this.MainBtn);
+            this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.Message);
             this.Controls.Add(this.MessagePic);
             this.Controls.Add(this.panel2);
@@ -143,7 +143,7 @@
         private Panel panel2;
         private PictureBox MessagePic;
         private Label Message;
-        private Button MainBtn;
+        private Button CloseBtn;
         private Button YesBtn;
         private Button NoBtn;
     }
