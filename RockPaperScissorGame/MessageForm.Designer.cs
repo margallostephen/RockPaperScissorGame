@@ -61,6 +61,7 @@
             this.MessagePic.Location = new System.Drawing.Point(29, 76);
             this.MessagePic.Name = "MessagePic";
             this.MessagePic.Size = new System.Drawing.Size(138, 136);
+            this.MessagePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.MessagePic.TabIndex = 2;
             this.MessagePic.TabStop = false;
             // 
@@ -76,6 +77,7 @@
             // MainBtn
             // 
             this.MainBtn.BackColor = System.Drawing.Color.DodgerBlue;
+            this.MainBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MainBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.MainBtn.Location = new System.Drawing.Point(354, 218);
             this.MainBtn.Name = "MainBtn";
@@ -83,11 +85,12 @@
             this.MainBtn.TabIndex = 4;
             this.MainBtn.Text = "Okay";
             this.MainBtn.UseVisualStyleBackColor = false;
-            this.MainBtn.Click += new System.EventHandler(this.OkayBtn_Click);
+            this.MainBtn.Click += new System.EventHandler(this.MainBtn_Click);
             // 
             // YesBtn
             // 
             this.YesBtn.BackColor = System.Drawing.Color.Gold;
+            this.YesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.YesBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.YesBtn.Location = new System.Drawing.Point(215, 218);
             this.YesBtn.Name = "YesBtn";
@@ -100,6 +103,7 @@
             // NoBtn
             // 
             this.NoBtn.BackColor = System.Drawing.Color.Crimson;
+            this.NoBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NoBtn.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.NoBtn.Location = new System.Drawing.Point(487, 218);
             this.NoBtn.Name = "NoBtn";
@@ -113,6 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(700, 350);
             this.Controls.Add(this.NoBtn);
             this.Controls.Add(this.YesBtn);
@@ -125,6 +130,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MessageForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "MessageForm";
             ((System.ComponentModel.ISupportInitialize)(this.MessagePic)).EndInit();
             this.ResumeLayout(false);
