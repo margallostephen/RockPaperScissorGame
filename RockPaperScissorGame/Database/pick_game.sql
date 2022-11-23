@@ -21,8 +21,6 @@ SET time_zone = "+00:00";
 -- Database: `pick_game`
 --
 
-CREATE DATABASE pick_game;
-
 -- --------------------------------------------------------
 
 --
