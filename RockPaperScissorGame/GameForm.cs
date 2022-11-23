@@ -13,8 +13,8 @@ namespace RockPaperScissorGame
             this.FormClosing += GameForm_FormClosing;
         }
 
-        readonly private MySqlConnection connection = new MySqlConnection("Server=localhost;Database=pick_game;User=root;Password=password;");
-        readonly private Random random = new Random();
+        readonly private MySqlConnection connection = new("Server=localhost;Database=pick_game;User=root;Password=password;");
+        readonly private Random random = new();
         public static string close = "";
         private int playerPick = -1,
                     computerPick,
@@ -50,14 +50,14 @@ namespace RockPaperScissorGame
                 }
                 catch (Exception ex)
                 {
-                    MessageForm errorMessage = new MessageForm("Sql", ex.Message.ToString());
+                    MessageForm errorMessage = new("Sql", ex.Message.ToString());
                     errorMessage.ShowDialog();
                 }
             }
             else
             {
                 // Display error message
-                MessageForm warningMessage = new MessageForm("Name", "Please enter a player name first.");
+                MessageForm warningMessage = new("Name", "Please enter a player name first.");
                 warningMessage.ShowDialog();
             }
 
@@ -199,7 +199,7 @@ namespace RockPaperScissorGame
             else
             {
                 // Display error message
-                MessageForm alertMessage = new MessageForm("Pick", "Choose between rock, paper, or scissors first.");
+                MessageForm alertMessage = new("Pick", "Choose between rock, paper, or scissors first.");
                 alertMessage.ShowDialog();
             }
         }
@@ -230,7 +230,7 @@ namespace RockPaperScissorGame
         private void GameForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
-            MessageForm exitMessage = new MessageForm("Exit", "Do you really want to exit the game?");
+            MessageForm exitMessage = new("Exit", "Do you really want to exit the game?");
             exitMessage.ShowDialog();
 
             if (close == "Yes") 
