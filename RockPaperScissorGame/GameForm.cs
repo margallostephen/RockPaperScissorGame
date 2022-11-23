@@ -1,4 +1,5 @@
 using MySqlConnector;
+using System.Data;
 
 namespace RockPaperScissorGame
 {
@@ -29,7 +30,9 @@ namespace RockPaperScissorGame
                 try
                 {
                     // Inserting player name to database
-                    connection.Open();
+                    if (connection.State == ConnectionState.Closed)
+                        connection.Open();
+
                     var insertRecord = new MySqlCommand("INSERT INTO game_record (`player_name`, `player_hp`, `computer_hp`) " +
                         "VALUES('" + InputName.Text.Trim() + "', '" + 100 + "', '" + 100 + "');", connection);
                     insertRecord.ExecuteNonQuery();
@@ -42,6 +45,7 @@ namespace RockPaperScissorGame
                     playerHP = computerHP = reader.GetInt32(1);
                     PlayerHL.Text = playerHP + " HP";
                     ComputerHL.Text = computerHP + " HP";
+
                     connection.Close();
 
                     // Redirect the player to the game panel
